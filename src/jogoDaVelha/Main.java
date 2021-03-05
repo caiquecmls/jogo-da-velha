@@ -17,7 +17,9 @@ public class Main {
         char matriz[][] = new char[3][3];
         initialize(matriz);
         imprimirMatriz(matriz);
-        int linha, coluna;
+        int linha = 0, coluna = 0;
+        inserirNoTabuleiro(matriz, linha, coluna);
+        imprimirMatriz(matriz);
     }
     public static Scanner sc = new Scanner(System.in);
 
@@ -35,10 +37,25 @@ public class Main {
     public static void imprimirMatriz(char matriz[][]) {
         for (int i = 0; i < matriz.length; i++) {
             for (int j = 0; j < matriz[0].length; j++) {
-                System.out.print("| " + matriz[i][j] + " |");
+                System.out.printf("| %c |", matriz[i][j]);
             }
             System.out.println("");
         }
     }
 
+    public static void inserirNoTabuleiro(char matriz[][], int linha, int coluna) {;
+        System.out.println("Digite o Indice da posição que desaja");
+        linha = sc.nextInt();
+        coluna = sc.nextInt();
+        System.out.println("Digite X ou O");
+        matriz[linha][coluna] = sc.next().charAt(0);
+    }
+
+    public static void verificarPosicaoPreenchida(char matriz[][]) {
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz[0].length; j++) {
+
+            }
+        }
+    }
 }
